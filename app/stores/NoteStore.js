@@ -5,8 +5,24 @@ import NoteActions from '../actions/NoteActions';
 class NoteStore {
     constructor() {
         this.bindActions(NoteActions);
-        this.notes = [];
+        this.notes = [
+            {
+                id: uuid.v4(),
+                task: 'Learn Webpack'
+            },
+            {
+                id: uuid.v4(),
+                task: 'Learn React'
+            },
+            {
+                id: uuid.v4(),
+                task: 'Do laundry'
+            }
+        ];
+
   }
+
+
 
   create(note) {
       const notes = this.notes;
